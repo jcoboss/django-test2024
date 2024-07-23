@@ -1,7 +1,7 @@
 let currentPage = 0;
 let pageSize = 1;
 
-const BASE_URL = 'http://127.0.0.1:8000'
+const BASE_URL = 'http://localhost:8000'
 const apiPathname = '/api/content'
 
 const getContent = async (currentPage, pageSize) => {

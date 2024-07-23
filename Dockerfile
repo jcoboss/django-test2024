@@ -6,6 +6,7 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /code
 COPY requirements.txt /code/
 RUN pip install -r requirements.txt
-COPY ./core /code/
+COPY . /code/
+RUN python -m manage collectstatic --no-input
 
 ENTRYPOINT ["gunicorn", "--bind", "0.0.0.0:8630", "--worker-class=gevent", "--worker-connections=1000", "--workers=4", "core.wsgi:application"]

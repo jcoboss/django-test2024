@@ -7,7 +7,7 @@ from django.core.paginator import Paginator
 from django.http import JsonResponse
 
 def getContent(request):
-    contentList = Content.objects.all().select_related('creator').values('url', 'creator__username')[:30]
+    contentList = Content.objects.order_by('url').all().select_related('creator').values('url', 'creator__username')[:30]
     template = get_template("content.html")
     html = template.render({
       "pageName": "Content",
@@ -20,7 +20,7 @@ def getContentJson(request):
   page_size = request.GET.get('page_size')
   page_number = request.GET.get('page')
   filter = request.GET.get('filter', '') # Instagram, TikTok, User Generated Content
-  preSelection = Content.objects.all().select_related('creator')
+  preSelection = Content.objects.order_by('url').all().select_related('creator')
   if (len(filter) > 0):
     preSelection = preSelection.filter(creator__platform=filter)
   preResult = preSelection.values('url', 'creator__name', 'creator__rating')

@@ -2,7 +2,6 @@
 *.pyc
 __pycache__
 .venv
-
 #git ignore for web apps
 *.pyc
 *.pyo
@@ -12,3 +11,4 @@ __pycache__
 *.swn
 *.swm
 *.swl
+/staticfiles
