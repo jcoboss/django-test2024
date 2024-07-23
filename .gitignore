@@ -1,0 +1,14 @@
+#git ignote for django app
+*.pyc
+__pycache__
+.venv
+
+#git ignore for web apps
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.swo
+*.swn
+*.swm
+*.swl

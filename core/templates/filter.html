@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Collabstr | Creators</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+  <meta charset="UTF-8">
+  <style>
+    /* latin */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    /* latin */
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+      src: url(https://fonts.gstatic.com/s/inter/v13/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7W0Q5nw.woff2) format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="header-row">
+      <div>
+        <img alt="Collabstr logo" class="full-logo-img"
+          src="https://d5ik1gor6xydq.cloudfront.net/websiteImages/logo.svg" />
+      </div>
+    </div>
+  </div>
+  <div id="content">
+    <h1>Filter page</h1>
+    <main>
+      <nav aria-label="Page navigation example">
+        <ul class="filter">
+          <li id="Instagram" class="page-item"><a class="page-link" href="#">Instagram</a></li>
+          <li id="TikTok" class="page-item"><a class="page-link" href="#">TikTok</a></li>
+          <li id="User Generated Content" class="page-item"><a class="page-link" href="#">User Generated Content</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li id="prev" class="page-item pagination-btn"><a class="page-link" href="#">Previous</a></li>
+          <li id="next" class="page-item pagination-btn"><a class="page-link" href="#">Next</a></li>
+        </ul>
+      </nav>
+      <div id="spinner" class="spinner-border" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <section id="multimedia">
+      </section>
+    </main>
+  </div>
+</body>
+<script src="{% static 'filter.js' %}"></script>
+
+</html>
