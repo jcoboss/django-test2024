@@ -39,12 +39,10 @@ const render = (arr) => {
   document.getElementById('rating').innerHTML = Number.isNaN(creator__rating) ? '?' : creator__rating.toFixed(2);
   if (url.endsWith('.jpg') || url.endsWith('.png') || url.endsWith('.jpeg') || url.endsWith('.webp')) {
     const img = document.getElementById('multimedia-img')
-    console.log(img)
     img.src = url;
     img.style.display = 'block';
   } else if (url.endsWith('.mp4')) {
     const video = document.getElementById('multimedia-video');
-    console.log(video);
     video.src = url;
     video.style.display = 'block';
   }

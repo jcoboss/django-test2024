@@ -24,8 +24,6 @@ def getContentJson(request):
   if (len(filter) > 0):
     preSelection = preSelection.filter(creator__platform=filter)
   preResult = preSelection.values('url', 'creator__name', 'creator__rating')
-  print("page_size: ", page_size)
-  print("page_number: ", page_number)
   if page_size is not None and page_number is not None:
     paginator = Paginator(preResult, page_size)  # Change the number to the desired page size
     page_obj = paginator.get_page(page_number)
