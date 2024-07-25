@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "localhost",
     "nga9mfaw6j.execute-api.us-east-1.amazonaws.com",
+    '127.0.0.1',
 ]
 
 
@@ -82,10 +83,15 @@ WSGI_APPLICATION = "core.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+#config postgress db
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / 'staticfiles',
+        "ENGINE": "ENGINE",
+        "NAME": 'NAME',
+        "USER": 'USER',
+        "PASSWORD": 'PASSWORD',
+        "HOST": 'HOST',
+        "PORT": 'POST',
     }
 }
 
