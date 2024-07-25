@@ -12,3 +12,5 @@ __pycache__
 *.swm
 *.swl
 /staticfiles
+node_modules
+/.serverless

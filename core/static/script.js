@@ -1,7 +1,7 @@
 let currentPage = 0;
 let pageSize = 1;
 
-const BASE_URL = 'http://localhost:8000'
+const BASE_URL = 'https://nga9mfaw6j.execute-api.us-east-1.amazonaws.com/dev'
 const apiPathname = '/api/content'
 
 const getContent = async (currentPage, pageSize) => {

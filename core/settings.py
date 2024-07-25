@@ -25,7 +25,10 @@ SECRET_KEY = "django-insecure-qrbka2!b&40$i#8+&$-cg-h576p)g57w)&58d4#2*3_ut*uc3s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "localhost",
+    "nga9mfaw6j.execute-api.us-east-1.amazonaws.com",
+]
 
 
 # Application definition
@@ -82,7 +85,7 @@ WSGI_APPLICATION = "core.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "NAME": BASE_DIR / 'staticfiles',
     }
 }
 
@@ -131,3 +134,16 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CORS_ORIGIN_ALLOW_ALL = True
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+STORAGES = {
+    "default": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    },
+    "staticfiles": {
+        "BACKEND": "storages.backends.s3boto3.S3Boto3Storage",
+    },
+}
+
+AWS_STORAGE_BUCKET_NAME = "jacs-django-test2024"
+AWS_S3_REGION_NAME = "us-east-1"
+AWS_QUERYSTRING_AUTH = False
